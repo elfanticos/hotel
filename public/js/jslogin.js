@@ -7,15 +7,11 @@ $(window, document, undefined).ready(function() {
     else
       $this.removeClass('used');
   });
-
   var $ripples = $('.ripples');
-
   $ripples.on('click.Ripples', function(e) {
-
     var $this = $(this);
     var $offset = $this.parent().offset();
     var $circle = $this.find('.ripplesCircle');
-
     var x = e.pageX - $offset.left;
     var y = e.pageY - $offset.top;
 
@@ -25,11 +21,8 @@ $(window, document, undefined).ready(function() {
     });
 
     $this.addClass('is-active');
-
   });
-
   $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
   	$(this).removeClass('is-active');
   });
-
 });
